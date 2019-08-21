@@ -1,4 +1,4 @@
-=== BlankSlate ===
+=== Blindslate is based on BlankSlate ===
 
 Contributors: tidythemes, bhadaway
 Theme link: https://github.com/tidythemes/blankslate
