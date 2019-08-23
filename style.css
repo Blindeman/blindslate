@@ -15,6 +15,8 @@ BlindSlate WordPress Theme © 2011-2019 Naomi Blindeman
 BlindSlate is distributed under the terms of the GNU GPL
 */
 
+/* * * * M O B I L E  F I R S T * * * */
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
@@ -28,9 +30,10 @@ body {
     background-image: linear-gradient(#FBE9E7, #F8F1E5, #426E86); 
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Open Sans', sans;
     font-size: 16px;
     min-height: 100vh;
-    line-height: 1
+    line-height: 1.5;
 }
 a {
     text-decoration: none;
@@ -145,41 +148,73 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* * * * M E N U * * * */
+.menu-toggle {
+    background: none;
+    border: none;
+    border-top: 2px solid #FBE9E7;
+    cursor: pointer;
+    display: none;
+    height: 24px;
+    position: relative;
+    width: 32px;
+}
+.menu-toggle::before {
+    border-top: 2px solid #FBE9E7;
+    content: "";
+    left: 0;
+    position: absolute;
+    top: 9px;
+    width: 100%;
+}
+.menu-toggle::after {
+    border-bottom: 2px solid #FBE9E7;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
 #menu {
     background-color: #426E86;
     font-family: "Amatic SC", cursive;
+    padding: 1em;
 }
-#menu-hoofdmenu {
+#menu-hoofdmenu,
+#menu-hoofdmenu-engels {
 	display: flex;
     font-size: 1.5rem;
-    justify-content: flex-end;
+    flex-direction: column;
     line-height: 1.625;
+    margin-top: 0.5em;
+    /*max-width: 100%;*/
 }
 .menu-item.tagline {
-    flex-grow: 1;
+    /*different background-color?*/
 }
 .menu-item:not(.tagline) {
-    margin-left: 1.5%;
+    /*margin-left: 1.5%; margin-top instead?*/
 }
-#menu-hoofdmenu .menu-item a {
+#menu-hoofdmenu .menu-item a,
+#menu-hoofdmenu-engels .menu-item a {
     color: #FBE9E7;
     padding: 0;
 }
-#menu-hoofdmenu li[class*="current-menu-"] > a {
+#menu-hoofdmenu li[class*="current-menu-"] > a,
+#menu-hoofdmenu-engels li[class*="current-menu-"] > a,
+#menu-hoofdmenu .menu-item a:hover,
+#menu-hoofdmenu-engels .menu-item a:hover,
+#menu-hoofdmenu .menu-item a:focus,
+#menu-hoofdmenu-engels .menu-item a:focus {
 	color: #f9ba32;
 }
 
 /* * * * C O N T E N T * * * */
 .width {
-	max-width: 1024px;
+	max-width: 90%;
 	margin: auto;
 }
-.single-portfolio .entry-content { margin: 0; }
 div > .gallery { background-color: #2F3131; padding: 1em; }
-#tekst .gallery img { border: none; border-radius: 0; }
-.gallery-caption { color: #F8F1E5; font-size: 0.8em; font-weight: 300; }
-#tekst .gallery-columns-3 .gallery-item { width: 31%; }
-#tekst .gallery-columns-3 .gallery-item + .gallery-item { margin-left: 3%; }
 .entry-content ul { margin-left: 0; }
 .entry-content li { list-style: none; }
 .entry-content li::before {
@@ -190,16 +225,38 @@ div > .gallery { background-color: #2F3131; padding: 1em; }
 }
 
 /* * * * F O O T E R * * * */
-.reigert {
-    position: fixed; 
-    bottom: 0; 
-    right: 11%; 
-    z-index: 2;
+
+
+
+/* * * * F O R  B I G  S C R E E N S * * * */
+@media screen and (min-width: 1025px){
+    .width,
+    #menu-hoofdmenu,
+    #menu-hoofdmenu-engels {
+        max-width: 1024px;
+    }
+    #menu {
+        padding: 0;
+    }
+    .menu-toggle {
+        display: none;
+    }
+    .menu.width {
+        display: block;
+    }
+    #menu-hoofdmenu,
+    #menu-hoofdmenu-engels {
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: 0;
+    }
+    .menu-item.tagline {
+        flex-grow: 1;
+    }
+    .menu-item:not(.tagline) {
+        margin: 0 0 0 1.8%;
+    }
 }
-@media only screen and (max-width: 1025px) {
-    .reigert { right: 0; }
-    .inside-header { padding-left: 20px; }
-}
-@media only screen and (max-width: 800px){
-    .reigert { z-index: -1; }
+@media screen and (min-width: 768px){
+
 }

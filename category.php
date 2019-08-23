@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main id="content">
+<main id="content" class="width">
     <header class="header">
         <h1 class="entry-title"><?php single_term_title(); ?></h1>
         <div class="archive-meta">
