@@ -17,6 +17,15 @@ BlindSlate is distributed under the terms of the GNU GPL
 
 /* * * * M O B I L E  F I R S T * * * */
 
+/* variables */
+:root{
+    --blush: #FBE9E7;
+    --bone: #F8F1E5;
+    --steelBlue: #426E86;
+    --coal: #2F3131;
+    --sunshine: #F9BA32;
+}
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
@@ -26,23 +35,35 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     vertical-align: baseline
 }
 body {
-    background-attachment: fixed;
-    background-image: linear-gradient(#FBE9E7, #F8F1E5, #426E86); 
+    /*background-attachment: fixed;*/
+    background-image: linear-gradient(var(--blush), var(--bone), var(--steelBlue)); 
     background-repeat: no-repeat;
     background-size: cover;
+    color: var(--coal);
     font-family: 'Open Sans', sans;
     font-size: 16px;
     min-height: 100vh;
     line-height: 1.5;
 }
 a {
+    color: var(--steelBlue);
     text-decoration: none;
+}
+a:hover,
+a:focus,
+a:active {
+    background-color: var(--sunshine);
 }
 button {
     outline: 0
 }
 ol, ul {
     list-style: none
+}
+img {
+	height: auto;
+	max-width: 100%;
+	width: 100%;
 }
 blockquote, q {
     quotes: none
@@ -63,7 +84,12 @@ q:after {
     content: '"';
     font-style: normal
 }
-textarea, input[type="text"], input[type="button"], input[type="submit"], input[type="reset"], input[type="search"], input[type="password"] {
+textarea, input[type="text"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="search"],
+input[type="password"] {
     -webkit-appearance: none;
     appearance: none;
     border-radius: 0
@@ -115,7 +141,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 .sticky {}
 .bypostauthor {}
-.wp-caption {}
+.wp-caption {
+	max-width: 100%;
+}
 .wp-caption-text {}
 .gallery-caption {}
 .alignright {}
@@ -138,20 +166,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* * * * H E A D E R * * * */
 #site-title {
-    color: #426E86;
+    color: var(--steelBlue);
     font-family: 'anagram';
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     letter-spacing: 1px;
+    margin: 1em 0;
 }
 #site-title a {
-    color: #426E86;
+    color:var(--steelBlue);
 }
 
 /* * * * M E N U * * * */
 .menu-toggle {
     background: none;
     border: none;
-    border-top: 2px solid #FBE9E7;
+    border-top: 2px solid var(--blush);
     cursor: pointer;
     display: none;
     height: 24px;
@@ -159,7 +188,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     width: 32px;
 }
 .menu-toggle::before {
-    border-top: 2px solid #FBE9E7;
+    border-top: 2px solid var(--blush);
     content: "";
     left: 0;
     position: absolute;
@@ -167,7 +196,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     width: 100%;
 }
 .menu-toggle::after {
-    border-bottom: 2px solid #FBE9E7;
+    border-bottom: 2px solid var(--blush);
     bottom: 0;
     content: "";
     left: 0;
@@ -176,9 +205,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     z-index: 1;
 }
 #menu {
-    background-color: #426E86;
+    background-color: var(--steelBlue);
     font-family: "Amatic SC", cursive;
-    padding: 1em;
+    padding: 1em 0;
 }
 #menu-hoofdmenu,
 #menu-hoofdmenu-engels {
@@ -197,7 +226,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 #menu-hoofdmenu .menu-item a,
 #menu-hoofdmenu-engels .menu-item a {
-    color: #FBE9E7;
+    color: var(--blush);
     padding: 0;
 }
 #menu-hoofdmenu li[class*="current-menu-"] > a,
@@ -206,7 +235,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 #menu-hoofdmenu-engels .menu-item a:hover,
 #menu-hoofdmenu .menu-item a:focus,
 #menu-hoofdmenu-engels .menu-item a:focus {
-	color: #f9ba32;
+    background-color: transparent;
+	color: var(--sunshine);
+}
+/* language Switcher */
+.lang-item img {
+	width: auto;
 }
 
 /* * * * C O N T E N T * * * */
@@ -214,15 +248,67 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	max-width: 90%;
 	margin: auto;
 }
-div > .gallery { background-color: #2F3131; padding: 1em; }
+h1.entry-title {
+	font-family: "Amatic Sc",handwriting;
+	font-size: 1.8em;
+	color: var(--steelBlue);
+	font-weight: 600;
+	text-transform: lowercase;
+}
+h2.entry-title {
+	font-size: 1.1em;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+h2.entry-title a {
+    color: var(--sunshine);
+}
+h2.entry-title a:focus,
+h2.entry-title a:hover,
+h2.entry-title a:active {
+    background-color: transparent;
+    color: var(--blush);
+}
+.entry-content a:hover,
+.entry-content a:focus,
+.entry-content a:active {
+    color: var(--coal);
+}
+div > .gallery { background-color: var(--coal); padding: 1em; }
 .entry-content ul { margin-left: 0; }
 .entry-content li { list-style: none; }
 .entry-content li::before {
 	content: "\f101";
 	font-family: fontAwesome;
 	padding-right: 0.5em;
-	color: #488a99;
+	color: var(--steelBlue);
 }
+
+
+/* Archives */
+.archive #content {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-row-gap: 3em;
+}
+.archive article {
+    background-color: var(--coal);
+    color: var(--bone);
+    font-weight: 300;
+    padding: 1em;
+    position: relative;
+}
+.archive article + article::before {
+	content: "";
+	position: absolute;
+	top: -1.5em;
+	z-index: 100;
+	border-top: 3px dotted var(--sunshine);
+	width: 10rem;
+	left: 50%;
+	margin-left: -5em;
+}
+
 
 /* * * * F O O T E R * * * */
 
@@ -256,7 +342,25 @@ div > .gallery { background-color: #2F3131; padding: 1em; }
     .menu-item:not(.tagline) {
         margin: 0 0 0 1.8%;
     }
+    #site-title a:link::before,
+    #site-title a:link::after {
+        position: absolute;
+        transition: all ease 1s;
+    }
+    #site-title a:link::before {
+        content: "B";
+    }
+    #site-title a:link::after {
+        content: "W";
+        left: 12.35em;
+    }
+    #site-title a:hover::before,
+    #site-title a:hover::after {
+        color: var(--sunshine);
+    }
 }
 @media screen and (min-width: 768px){
-
+    #site-title {
+        font-size: 2.5rem;
+    }
 }

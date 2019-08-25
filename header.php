@@ -9,8 +9,10 @@
         <div id="wrapper" class="hfeed">
             <header id="header">
                 <nav id="menu">
-                    <button class="menu-toggle"><span class="screen-reader-text">Primary Menu</span></button>
-                    <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'menu width' ) ); ?>
+                    <div class="primary-menu-container width">
+                        <button class="menu-toggle"><span class="screen-reader-text">Primary Menu</span></button>
+                        <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => '' ) ); ?>
+                    </div>
                 </nav>
                 <div id="branding" class="width">
                     <div id="site-title">
