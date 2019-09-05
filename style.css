@@ -186,7 +186,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     background-color: var(--steelBlue);
     bottom: 0;
     font-family: "Amatic SC", cursive;
-    padding: 1em 0 0.5em;
+    padding: 0.5em 0;
     position: fixed;
     width: 100%;
     z-index: 2;
@@ -220,7 +220,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     cursor: pointer;
     display: none;
     height: 24px;
-    margin-bottom: 1.5em;
+    margin-top: 0.75em;
+    padding: 0;
     position: relative;
     width: 32px;
 }
@@ -243,8 +244,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 #menu-hoofdmenu,
 #menu-hoofdmenu-engels {
-    background-color: var(--steelBlue);
-    bottom: 2.5em;
+    background-color: #426E86FA; /* var(--steelBlue) transparent */
+    bottom: 2.45em;
 	display: flex;
     font-size: 1.5rem;
     flex-direction: column;
@@ -262,7 +263,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 #menu-hoofdmenu li[class*="current-menu-"] > a,
 #menu-hoofdmenu-engels li[class*="current-menu-"] > a {
-    background-color: transparent;
 	color: var(--sunshine);
 }
 #menu-hoofdmenu .menu-item a:hover,
@@ -275,7 +275,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .lang-item a::after,
 .lang-item a:hover::after,
 .lang-item a:focus::after,
-.lang-item a:active::after {
+.lang-item a:active::after,
+h2 a::after,
+h2 a:hover::after,
+h2 a:focus::after,
+h2 a:active::after,
+.socialmedialinks a::after,
+.socialmedialinks a:hover::after,
+.socialmedialinks a:focus::after,
+.socialmedialinks a:active::after,
+a.thumbnail-link::after,
+a.thumbnail-link:hover::after,
+a.thumbnail-link:focus::after,
+a.thumbnail-link:active::after {
     background-color: transparent;
 }
 .lang-item img {
@@ -303,7 +315,7 @@ hr {
 }
 h1.entry-title {
 	font-family: "Amatic Sc",handwriting;
-	font-size: 300%;
+	font-size: 225%;
 	color: var(--steelBlue);
     font-weight: 600;
     line-height: 1;
@@ -375,7 +387,6 @@ h2.entry-title a {
 h2.entry-title a:focus,
 h2.entry-title a:hover,
 h2.entry-title a:active {
-    background-color: transparent;
     color: var(--bone);
 }
 .hentry header {
@@ -389,6 +400,70 @@ h2.entry-title a:active {
 	display: block;
 	margin-bottom: 1em;
 }
+.nav-links {
+	display: flex;
+	justify-content: space-between;
+}
+.nav-links a:link, .nav-links a:visited {
+	color: var(--coal);
+}
+
+/* * * * F O R M S * * * */
+#searchform {
+    position: relative;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+input[type="submit"],
+button,
+textarea,
+select {
+	background-color: var(--coal);
+    border: 1px solid var(--coal);
+    color: var(--bone);
+    font-size: 1em;
+    margin-right: 1%;
+    padding: 0.8em 1em;
+    width: 100%;
+}
+input[type="submit"] {
+	width: 15%;
+	height: 3.5em;
+	border: 1px solid var(--coal);
+	background-color: var(--coal);
+	color: var(--bone);
+	vertical-align: top;
+}
+input:focus,
+textarea:focus,
+select:focus,
+button[type="submit"]:hover,
+button[type="submit"]:focus,
+button[type="submit"]:active {
+    border-color: var(--sunshine);
+}
+#s {
+	padding-left: 2.2em;
+}
+#searchform::before {
+	content: "\e80b";
+	font-family: entypo;
+	color: var(--bone);
+	position: absolute;
+	left: 0.5em;
+	top: 0.4em;
+	font-size: 125%;
+}
+#vscf .form-group input[type="text"],
+#vscf .form-group input[type="email"],
+#vscf .form-group textarea {
+	width: 100%;
+}
 
 
 /* * * * F O O T E R * * * */
@@ -396,12 +471,32 @@ h2.entry-title a:active {
 	background-image: url("/blindemanwebsites/wp-content/uploads/gras.png");
     background-repeat: repeat-x;
     background-position: center bottom;
-    margin: 4.5em 0;
+    margin: 3.7em 0;
 }
 .xoxo {
 	display: flex;
 	flex-direction: column;
 	min-height: 18em;
+}
+.xoxo > li {
+    background-color: #F8F1E580; /*Bone transparent*/
+    padding: 1em 1em 0.5em;
+}
+.socialmedialinks {
+    font-size: 1.25em;
+}
+.socialmedialinks a {
+    background-color: var(--coal);
+    border: 1px solid var(--coal);
+    color: var(--bone);
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    margin-bottom: 0.5em;
+}
+.socialmedialinks a:hover,
+.socialmedialinks a:focus,
+.socialmedialinks a:active {
+	border-color: var(--sunshine);
 }
 
 
@@ -441,5 +536,8 @@ h2.entry-title a:active {
     }
     .entry-content h2 {
         font-size: 185%;
+    }
+    h1.entry-title {
+        font-size: 300%;
     }
 }
