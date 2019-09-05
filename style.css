@@ -17,13 +17,19 @@ BlindSlate is distributed under the terms of the GNU GPL
 
 /* * * * M O B I L E  F I R S T * * * */
 
+.post-edit-link {
+    display: none;
+}
+
+
 /* variables */
 :root{
-    --blush: #FBE9E7;
+    --blush: hsl(6, 71.4%, 97%); /* #FBE9E7 - hsl(6, 71.4%, 94.5%) / #FDF6F6 */
     --bone: #F8F1E5;
     --steelBlue: #426E86;
     --coal: #2F3131;
     --sunshine: #F9BA32;
+    --mspeed: 0.5s;
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -36,7 +42,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 body {
     /*background-attachment: fixed;*/
-    background-image: linear-gradient(var(--blush), var(--bone), var(--steelBlue)); 
+    background-image: linear-gradient(var(--bone), var(--bone), var(--blush), var(--steelBlue)); 
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--coal);
@@ -47,12 +53,32 @@ body {
 }
 a {
     color: var(--steelBlue);
+    position: relative;
     text-decoration: none;
+    transition: color var(--mspeed) ease;
 }
 a:hover,
 a:focus,
 a:active {
+    color: var(--coal);
+}
+a:link::after,
+a:visited::after {
     background-color: var(--sunshine);
+    content: "";
+    height: 100%;
+    left: -5%;
+    position: absolute;
+    top:0;
+    transform: skewX(-5deg);
+    transition: width var(--mspeed) ease;
+    width: 0;
+    z-index: -1;
+}
+a:hover::after,
+a:focus::after,
+a:active::after {
+    width: 112%;
 }
 button {
     outline: 0
@@ -153,42 +179,53 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute !important
 }
-@font-face {
-    font-family: 'anagram';
-    src: url('font/anagram-webfont.eot');
-    src: url('font/anagram-webfont.eot?#iefix') format('embedded-opentype'),
-         url('font/anagram-webfont.woff') format('woff'),
-         url('font/anagram-webfont.ttf') format('truetype'),
-         url('font/anagram-webfont.svg#anagramregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+
 
 /* * * * H E A D E R * * * */
+#header {
+    background-color: var(--steelBlue);
+    bottom: 0;
+    font-family: "Amatic SC", cursive;
+    padding: 1em 0 0.5em;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+#header .width {
+    display: flex;
+}
+#branding {
+    flex-grow: 1;
+}
 #site-title {
-    color: var(--steelBlue);
-    font-family: 'anagram';
+    color: var(--bone);
     font-size: 1.8rem;
     letter-spacing: 1px;
-    margin: 1em 0;
 }
 #site-title a {
-    color:var(--steelBlue);
+    color: var(--bone);
+    z-index: 2;
+}
+#site-title a:hover,
+#site-title a:focus,
+#site-title a:active {
+    color: var(--coal);
 }
 
 /* * * * M E N U * * * */
 .menu-toggle {
     background: none;
     border: none;
-    border-top: 2px solid var(--blush);
+    border-top: 2px solid var(--bone);
     cursor: pointer;
     display: none;
     height: 24px;
+    margin-bottom: 1.5em;
     position: relative;
     width: 32px;
 }
 .menu-toggle::before {
-    border-top: 2px solid var(--blush);
+    border-top: 2px solid var(--bone);
     content: "";
     left: 0;
     position: absolute;
@@ -196,7 +233,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     width: 100%;
 }
 .menu-toggle::after {
-    border-bottom: 2px solid var(--blush);
+    border-bottom: 2px solid var(--bone);
     bottom: 0;
     content: "";
     left: 0;
@@ -204,57 +241,129 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     width: 100%;
     z-index: 1;
 }
-#menu {
-    background-color: var(--steelBlue);
-    font-family: "Amatic SC", cursive;
-    padding: 1em 0;
-}
 #menu-hoofdmenu,
 #menu-hoofdmenu-engels {
+    background-color: var(--steelBlue);
+    bottom: 2.5em;
 	display: flex;
     font-size: 1.5rem;
     flex-direction: column;
+    left: 0;
     line-height: 1.625;
-    margin-top: 0.5em;
-    /*max-width: 100%;*/
-}
-.menu-item.tagline {
-    /*different background-color?*/
-}
-.menu-item:not(.tagline) {
-    /*margin-left: 1.5%; margin-top instead?*/
+    padding: 0 5% 1em;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
 }
 #menu-hoofdmenu .menu-item a,
 #menu-hoofdmenu-engels .menu-item a {
-    color: var(--blush);
+    color: var(--bone);
     padding: 0;
 }
 #menu-hoofdmenu li[class*="current-menu-"] > a,
-#menu-hoofdmenu-engels li[class*="current-menu-"] > a,
+#menu-hoofdmenu-engels li[class*="current-menu-"] > a {
+    background-color: transparent;
+	color: var(--sunshine);
+}
 #menu-hoofdmenu .menu-item a:hover,
 #menu-hoofdmenu-engels .menu-item a:hover,
 #menu-hoofdmenu .menu-item a:focus,
 #menu-hoofdmenu-engels .menu-item a:focus {
-    background-color: transparent;
-	color: var(--sunshine);
+    color: var(--coal);
 }
 /* language Switcher */
+.lang-item a::after,
+.lang-item a:hover::after,
+.lang-item a:focus::after,
+.lang-item a:active::after {
+    background-color: transparent;
+}
 .lang-item img {
 	width: auto;
 }
 
 /* * * * C O N T E N T * * * */
+#container {
+    margin: 1em 0;
+}
+h2:not(:first-child),
+h3:not(:first-child),
+p + p {
+    margin-top: 1.5rem;
+}
 .width {
 	max-width: 90%;
 	margin: auto;
 }
+hr {
+	margin: 1.5em auto;
+	width: 60%;
+	border: none;
+	border-top: 3px dotted var(--sunshine);
+}
 h1.entry-title {
 	font-family: "Amatic Sc",handwriting;
-	font-size: 1.8em;
+	font-size: 300%;
 	color: var(--steelBlue);
-	font-weight: 600;
+    font-weight: 600;
+    line-height: 1;
 	text-transform: lowercase;
 }
+.entry-content a:hover,
+.entry-content a:focus,
+.entry-content a:active {
+    color: var(--coal);
+}
+div > .gallery {
+    background-color: var(--coal);
+    padding: 1em;
+}
+.entry-content ul { margin-left: 0.5em; }
+.entry-content li { list-style: none; }
+.entry-content li::before {
+	content: "\E80E";
+	font-family: 'entypo';
+	padding-right: 0.5em;
+	color: var(--steelBlue);
+}
+.entry-content h2 {
+    color: var(--steelBlue);
+    font-size: 150%;
+    font-weight: 300;
+}
+.entry-content h3 {
+    color: var(--steelBlue);
+    font-size: 120%;
+}
+h3.icon-star-empty::before {
+	margin-left: -0.2em;
+	color: var(--sunshine);
+	transform: rotate(-5deg);
+}
+.header {
+    margin-bottom: 1em;
+}
+
+
+/* Archives */
+.bw-post-list {
+	margin-top: 1.5rem;
+}
+.archive #content,
+.home .bw-post-list {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-row-gap: 2em;
+}
+.archive article,
+.home .bw-post-list article {
+    background-color: var(--coal);
+    color: var(--bone);
+    font-weight: 300;
+    padding: 1em;
+    position: relative;
+}
+.bw-post-list h2.entry-title,
 h2.entry-title {
 	font-size: 1.1em;
 	font-weight: 400;
@@ -267,51 +376,33 @@ h2.entry-title a:focus,
 h2.entry-title a:hover,
 h2.entry-title a:active {
     background-color: transparent;
-    color: var(--blush);
-}
-.entry-content a:hover,
-.entry-content a:focus,
-.entry-content a:active {
-    color: var(--coal);
-}
-div > .gallery { background-color: var(--coal); padding: 1em; }
-.entry-content ul { margin-left: 0; }
-.entry-content li { list-style: none; }
-.entry-content li::before {
-	content: "\f101";
-	font-family: fontAwesome;
-	padding-right: 0.5em;
-	color: var(--steelBlue);
-}
-
-
-/* Archives */
-.archive #content {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-row-gap: 3em;
-}
-.archive article {
-    background-color: var(--coal);
     color: var(--bone);
-    font-weight: 300;
-    padding: 1em;
-    position: relative;
 }
-.archive article + article::before {
-	content: "";
-	position: absolute;
-	top: -1.5em;
-	z-index: 100;
-	border-top: 3px dotted var(--sunshine);
-	width: 10rem;
-	left: 50%;
-	margin-left: -5em;
+.hentry header {
+	margin-bottom: 1em;
+}
+.entry-meta {
+    color: #b4b4b4;
+	font-size: 75%;
+}
+.thumbnail-link {
+	display: block;
+	margin-bottom: 1em;
 }
 
 
 /* * * * F O O T E R * * * */
-
+#footer {
+	background-image: url("/blindemanwebsites/wp-content/uploads/gras.png");
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    margin: 4.5em 0;
+}
+.xoxo {
+	display: flex;
+	flex-direction: column;
+	min-height: 18em;
+}
 
 
 /* * * * F O R  B I G  S C R E E N S * * * */
@@ -336,23 +427,8 @@ div > .gallery { background-color: var(--coal); padding: 1em; }
         justify-content: flex-end;
         margin-top: 0;
     }
-    .menu-item.tagline {
-        flex-grow: 1;
-    }
-    .menu-item:not(.tagline) {
+    .menu-item {
         margin: 0 0 0 1.8%;
-    }
-    #site-title a:link::before,
-    #site-title a:link::after {
-        position: absolute;
-        transition: all ease 1s;
-    }
-    #site-title a:link::before {
-        content: "B";
-    }
-    #site-title a:link::after {
-        content: "W";
-        left: 12.35em;
     }
     #site-title a:hover::before,
     #site-title a:hover::after {
@@ -362,5 +438,8 @@ div > .gallery { background-color: var(--coal); padding: 1em; }
 @media screen and (min-width: 768px){
     #site-title {
         font-size: 2.5rem;
+    }
+    .entry-content h2 {
+        font-size: 185%;
     }
 }
