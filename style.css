@@ -88,7 +88,8 @@ ol, ul {
 }
 img {
 	height: auto;
-	max-width: 100%;
+    max-width: 100%;
+    vertical-align: middle;
 	width: 100%;
 }
 blockquote, q {
@@ -165,16 +166,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent
 }
-.sticky {}
-.bypostauthor {}
 .wp-caption {
 	max-width: 100%;
 }
-.wp-caption-text {}
-.gallery-caption {}
+.wp-caption-text { font-size: 90%; margin-top: 0.5em; }
+/*.sticky {}
+.gallery-caption { }
 .alignright {}
 .alignleft {}
-.aligncenter {}
+.aligncenter {}*/
 .screen-reader-text {
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute !important
@@ -289,6 +289,7 @@ a.thumbnail-link:hover::after,
 a.thumbnail-link:focus::after,
 a.thumbnail-link:active::after {
     background-color: transparent;
+    content: none;
 }
 .lang-item img {
 	width: auto;
@@ -347,6 +348,9 @@ div > .gallery {
     color: var(--steelBlue);
     font-size: 120%;
 }
+.entry-content h4 {
+    font-size: 110%;
+}
 h3.icon-star-empty::before {
 	margin-left: -0.2em;
 	color: var(--sunshine);
@@ -356,6 +360,15 @@ h3.icon-star-empty::before {
     margin-bottom: 1em;
 }
 
+.portfolio-gallery {
+    background-color: var(--coal);
+    color: var(--bone);
+    margin-bottom: 2em;
+	padding: 1em;
+}
+.portfolio-gallery li + li {
+    margin-top: 1em;
+}
 
 /* Archives */
 .bw-post-list {
@@ -374,6 +387,10 @@ h3.icon-star-empty::before {
     font-weight: 300;
     padding: 1em;
     position: relative;
+}
+.archive .entry-summary,
+.home .bw-post-list .entry-summary {
+    margin-top: 1em;
 }
 .bw-post-list h2.entry-title,
 h2.entry-title {
@@ -398,7 +415,6 @@ h2.entry-title a:active {
 }
 .thumbnail-link {
 	display: block;
-	margin-bottom: 1em;
 }
 .nav-links {
 	display: flex;
