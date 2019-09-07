@@ -181,10 +181,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 .wp-caption-text { font-size: 90%; margin-top: 0.5em; }
 /*.sticky {}
-.gallery-caption { }
-.alignright {}
-.alignleft {}
-.aligncenter {}*/
+.gallery-caption {}*/
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
 .screen-reader-text {
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute !important
@@ -546,7 +559,8 @@ button[type="submit"]:active {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
-	        flex-direction: column;
+            flex-direction: column;
+    justify-content: center;
 	min-height: 18em;
 }
 .xoxo > li {
@@ -574,13 +588,13 @@ button[type="submit"]:active {
 /* * * * F O R  B I G  S C R E E N S * * * */
 @media screen and (min-width: 768px){
     #site-title {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
     }
     .entry-content h2 {
         font-size: 185%;
     }
     h1.entry-title {
-        font-size: 300%;
+        font-size: 2.3rem;
     }
     #container {
         -webkit-box-flex: 1;
@@ -630,13 +644,64 @@ button[type="submit"]:active {
         grid-column: 1 / span 2;
     }
 }
-@media screen and (min-width: 1025px){
-    .width,
+@media screen and (min-width: 1024px){
+    #header {
+        bottom: auto;
+    }
     #menu-hoofdmenu,
     #menu-hoofdmenu-engels {
+        bottom: auto;
+        top: 2.9em;
+    }
+    .menu-toggle {
+        margin-top: 1.25em;
+    }
+    #footer {
+        margin-bottom: 0;
+    }
+    #container {
+        margin-top: 5.5em;
+    }
+    .page h1.entry-title,
+    .archive h1.entry-title {
+        border-bottom: 3px dotted var(--steelBlue);
+        padding-bottom: 0.5em;
+    }
+    .single article header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        border-bottom: 3px dotted var(--steelBlue);
+        padding-bottom: 0.5em;
+    }
+    #vscf {
+        width: 50%;
+    }
+}
+@media screen and (min-width: 1025px){
+    #site-title {
+        font-size: 2.5rem;
+    }
+    .entry-content h2 {
+        font-size: 185%;
+    }
+    h1.entry-title {
+        font-size: 2.5rem;
+    }
+    #container {
+        margin-top: 12em;
+    }
+    #header .width {
+        align-items: flex-end;
+    }
+    .width {
         max-width: 1024px;
     }
+    #branding {
+        flex-grow: initial;
+    }
     #menu {
+        flex-grow: 1;
         padding: 0;
     }
     .menu-toggle {
@@ -647,6 +712,7 @@ button[type="submit"]:active {
     }
     #menu-hoofdmenu,
     #menu-hoofdmenu-engels {
+        background: transparent;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
             -ms-flex-direction: row;
@@ -654,13 +720,19 @@ button[type="submit"]:active {
         -webkit-box-pack: end;
             -ms-flex-pack: end;
                 justify-content: flex-end;
+        position: static;
         margin-top: 0;
+        padding: 0;
+        padding-bottom: 0.2em;
     }
     .menu-item {
         margin: 0 0 0 1.8%;
     }
-    #site-title a:hover::before,
-    #site-title a:hover::after {
-        color: var(--sunshine);
+    .archive article:not(.portfolio),
+    .bw-post-list article {
+        width: 75%;
+    }
+    .hentry .header {
+        margin-bottom: 1.5em;
     }
 }
