@@ -41,20 +41,24 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     vertical-align: baseline
 }
 body {
-    /*background-attachment: fixed;*/
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bone)), color-stop(var(--bone)), color-stop(var(--blush)), to(var(--steelBlue)));
+    background-image: -o-linear-gradient(var(--bone), var(--bone), var(--blush), var(--steelBlue));
     background-image: linear-gradient(var(--bone), var(--bone), var(--blush), var(--steelBlue)); 
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--coal);
     font-family: 'Open Sans', sans;
     font-size: 16px;
-    min-height: 100vh;
     line-height: 1.5;
+    min-height: 100%;
+    min-height: 100vh;
 }
 a {
     color: var(--steelBlue);
     position: relative;
     text-decoration: none;
+    -webkit-transition: color var(--mspeed) ease;
+    -o-transition: color var(--mspeed) ease;
     transition: color var(--mspeed) ease;
 }
 a:hover,
@@ -70,7 +74,11 @@ a:visited::after {
     left: -5%;
     position: absolute;
     top:0;
-    transform: skewX(-5deg);
+    -webkit-transform: skewX(-5deg);
+        -ms-transform: skewX(-5deg);
+            transform: skewX(-5deg);
+    -webkit-transition: width var(--mspeed) ease;
+    -o-transition: width var(--mspeed) ease;
     transition: width var(--mspeed) ease;
     width: 0;
     z-index: -1;
@@ -118,7 +126,8 @@ input[type="reset"],
 input[type="search"],
 input[type="password"] {
     -webkit-appearance: none;
-    appearance: none;
+    -moz-appearance: none;
+         appearance: none;
     border-radius: 0
 }
 table {
@@ -163,7 +172,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display: block
 }
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     -webkit-tap-highlight-color: transparent
 }
 .wp-caption {
@@ -179,7 +189,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute !important
 }
-
+#wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 100%;
+    min-height: 100vh;
+}
 
 /* * * * H E A D E R * * * */
 #header {
@@ -192,10 +212,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     z-index: 2;
 }
 #header .width {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 #branding {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
 }
 #site-title {
     color: var(--bone);
@@ -244,11 +268,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 #menu-hoofdmenu,
 #menu-hoofdmenu-engels {
-    background-color: #426E86FA; /* var(--steelBlue) transparent */
+    background-color:RGBA(66, 110, 134,0.97); /* var(--steelBlue) transparent */
     bottom: 2.45em;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
     font-size: 1.5rem;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     left: 0;
     line-height: 1.625;
     padding: 0 5% 1em;
@@ -348,18 +377,19 @@ div > .gallery {
     color: var(--steelBlue);
     font-size: 120%;
 }
-.entry-content h4 {
-    font-size: 110%;
+.entry-footer h4 {
+    font-size: 90%;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 h3.icon-star-empty::before {
 	margin-left: -0.2em;
-	color: var(--sunshine);
-	transform: rotate(-5deg);
+    color: var(--sunshine);
+    text-shadow: 1px 1px 1px var(--steelBlue);
+	-webkit-transform: rotate(-5deg);
+	    -ms-transform: rotate(-5deg);
+	        transform: rotate(-5deg);
 }
-.header {
-    margin-bottom: 1em;
-}
-
 .portfolio-gallery {
     background-color: var(--coal);
     color: var(--bone);
@@ -375,13 +405,15 @@ h3.icon-star-empty::before {
 	margin-top: 1.5rem;
 }
 .archive #content,
-.home .bw-post-list {
+.bw-post-list {
+	display: -ms-grid;
 	display: grid;
+	-ms-grid-columns: 1fr;
 	grid-template-columns: 1fr;
 	grid-row-gap: 2em;
 }
 .archive article,
-.home .bw-post-list article {
+.bw-post-list article {
     background-color: var(--coal);
     color: var(--bone);
     font-weight: 300;
@@ -389,7 +421,7 @@ h3.icon-star-empty::before {
     position: relative;
 }
 .archive .entry-summary,
-.home .bw-post-list .entry-summary {
+.bw-post-list .entry-summary {
     margin-top: 1em;
 }
 .bw-post-list h2.entry-title,
@@ -406,8 +438,10 @@ h2.entry-title a:hover,
 h2.entry-title a:active {
     color: var(--bone);
 }
-.hentry header {
-	margin-bottom: 1em;
+.hentry header,
+.header,
+.single .post .thumbnail-link {
+    margin-bottom: 1em;
 }
 .entry-meta {
     color: #b4b4b4;
@@ -416,9 +450,25 @@ h2.entry-title a:active {
 .thumbnail-link {
 	display: block;
 }
+.portfolio-tag-links.icon-tag::before,
+.tag-links.icon-tag::before {
+	color: var(--sunshine);
+	text-shadow: 1px 1px 1px var(--steelBlue);
+}
+.post-navigation {
+    margin-top: 1em;
+}
 .nav-links {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+}
+.nav-links > div {
+    max-width: 50%;
 }
 .nav-links a:link, .nav-links a:visited {
 	color: var(--coal);
@@ -490,12 +540,17 @@ button[type="submit"]:active {
     margin: 3.7em 0;
 }
 .xoxo {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	min-height: 18em;
 }
 .xoxo > li {
-    background-color: #F8F1E580; /*Bone transparent*/
+    background-color: RGBA(248, 241, 229, 0.6); /*Bone transparent*/
     padding: 1em 1em 0.5em;
 }
 .socialmedialinks {
@@ -517,6 +572,64 @@ button[type="submit"]:active {
 
 
 /* * * * F O R  B I G  S C R E E N S * * * */
+@media screen and (min-width: 768px){
+    #site-title {
+        font-size: 2.5rem;
+    }
+    .entry-content h2 {
+        font-size: 185%;
+    }
+    h1.entry-title {
+        font-size: 300%;
+    }
+    #container {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+    }
+    .archive article:not(.portfolio),
+    .bw-post-list article {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr 1em 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1em;
+        -webkit-column-gap: 1em;
+           -moz-column-gap: 1em;
+                column-gap: 1em;
+        padding-bottom: 1.5em;
+    }
+    .archive .hentry header,
+    .bw-post-list .hentry header,
+    .archive.post-type-archive-portfolio #content > .header {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
+        grid-column: 1 / span 2;
+    }
+    .archive.post-type-archive-portfolio #content {
+        -ms-grid-columns: 1fr 2em 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 2em;
+        -webkit-column-gap: 2em;
+           -moz-column-gap: 2em;
+                column-gap: 2em;
+    }
+    .archive:not(.post-type-archive-portfolio) .entry-summary,
+    .bw-post-list .entry-summary {
+        margin-top: 0;
+    }
+    .xoxo {
+        width: 75%;
+    }
+    .single article {
+        display: grid;
+        grid-template-columns: 0.75fr 1.25fr;
+        column-gap: 1em;
+    }
+    .single article header, .single article footer {
+        grid-column: 1 / span 2;
+    }
+}
 @media screen and (min-width: 1025px){
     .width,
     #menu-hoofdmenu,
@@ -534,8 +647,13 @@ button[type="submit"]:active {
     }
     #menu-hoofdmenu,
     #menu-hoofdmenu-engels {
-        flex-direction: row;
-        justify-content: flex-end;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
         margin-top: 0;
     }
     .menu-item {
@@ -544,16 +662,5 @@ button[type="submit"]:active {
     #site-title a:hover::before,
     #site-title a:hover::after {
         color: var(--sunshine);
-    }
-}
-@media screen and (min-width: 768px){
-    #site-title {
-        font-size: 2.5rem;
-    }
-    .entry-content h2 {
-        font-size: 185%;
-    }
-    h1.entry-title {
-        font-size: 300%;
     }
 }

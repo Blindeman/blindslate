@@ -1,9 +1,7 @@
 <?php if ( has_post_thumbnail() && !is_singular( 'portfolio' ) ) { ?>
-    <div class="thumbnail-image">
-        <a href="<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full', false ); echo esc_url( $src[0] ); ?>" title="<?php the_title_attribute(); ?>">
-            <?php the_post_thumbnail(); ?>
-        </a>
-    </div>
+    <a href="<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full', false ); echo esc_url( $src[0] ); ?>" title="<?php the_title_attribute(); ?>" class="thumbnail-link">
+        <?php the_post_thumbnail(); ?>
+    </a>
     <?php } elseif ( is_singular( 'portfolio' ) && function_exists( 'get_field' ) ) { 
         //get the acf images for a little gallery
         $aImages = get_field( 'fotos_bij_portfolio_item' );
