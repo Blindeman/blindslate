@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Blindslate\n"
-"POT-Creation-Date: 2019-09-06 21:24-0700\n"
+"POT-Creation-Date: 2019-09-08 13:16-0700\n"
 "PO-Revision-Date: 2019-09-06 18:51-0700\n"
 "Last-Translator: \n"
 "Language-Team: Blindeman Websites\n"
@@ -13,8 +13,16 @@ msgstr ""
 "X-Generator: Poedit 2.2.3\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-KeywordsList: __;_e;esc_html__\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_e\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:5
+msgid "Not Found"
+msgstr ""
+
+#: 404.php:8
+msgid "Nothing found for the requested page. Try a search instead?"
+msgstr ""
 
 #: attachment.php:9
 #, php-format
@@ -42,7 +50,7 @@ msgstr ""
 msgid "Main Menu"
 msgstr ""
 
-#: functions.php:84
+#: functions.php:85
 msgid "Sidebar Widget Area"
 msgstr ""
 
@@ -59,6 +67,14 @@ msgstr ""
 #: search.php:6
 #, php-format
 msgid "Search Results for: %s"
+msgstr ""
+
+#: search.php:15
+msgid "Nothing Found"
+msgstr ""
+
+#: search.php:18
+msgid "Sorry, nothing matched your search. Please try again."
 msgstr ""
 
 #: searchform.php:8

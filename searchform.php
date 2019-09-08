@@ -4,7 +4,7 @@
  */
 
 ?>
-<form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+<form method="get" id="searchform" action="<?php echo esc_url( home_url( '/', "relative" ) ); ?>">
     <label for="s" class="screen-reader-text"><?php _e( 'Search', 'blindslate' ); ?></label>
     <input type="text" class="field" name="s" id="s" placeholder="<?php esc_attr_e( 'Search', 'blindslate' ); ?>" />
 </form>
