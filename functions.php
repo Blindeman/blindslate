@@ -15,6 +15,7 @@ function blindslate_setup() {
 add_action( 'wp_enqueue_scripts', 'blindslate_load_scripts' );
 function blindslate_load_scripts() {
     wp_enqueue_style( 'blindslate-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'bw-google-fonts', 'https://fonts.googleapis.com/css?family=Amatic+SC:700|Open+Sans:300,400,400i,600&display=swap&subset=latin-ext', false );
     wp_enqueue_script( 'jquery' );
 }
 
@@ -72,11 +73,11 @@ function blindslate_excerpt_read_more_link( $more ) {
     }
 }
 
-add_filter( 'intermediate_image_sizes_advanced', 'blindslate_image_insert_override' );
+/*add_filter( 'intermediate_image_sizes_advanced', 'blindslate_image_insert_override' );
 function blindslate_image_insert_override( $sizes ) {
     unset( $sizes['medium_large'] );
     return $sizes;
-}
+}*/
 
 add_action( 'widgets_init', 'blindslate_widgets_init' );
 function blindslate_widgets_init() {
