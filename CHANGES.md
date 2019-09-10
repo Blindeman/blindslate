@@ -1,3 +1,14 @@
+#### 2019.1.n3 / September 9, 2019
+* Make the home_url in the search form relative
+* Improved Dutch translations
+* Added grid styles for IE11
+* Sadly had to move the mobile menu back to the top, so the Google Translate Bar in Chrome on Android won't completely cover it
+* Added styles for the search result page
+* Added styles for the portfolio tag archives
+* Changed all vars to regular values for IE11, since I don't want to use a polyfill
+* Put the transition for the links on hover(!) to remove the odd behavior in IE11 on hover-out, where the line or background that had appeared on hover, grew much much bigger before it became smaller
+* Added more grid styles for compatability with Safari 11
+
 #### 2019.1.n2 / September 8, 2019
 * Allow for bigger images
 * enqueue Google fonts differently
