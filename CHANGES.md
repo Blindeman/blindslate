@@ -1,3 +1,6 @@
+#### 2019.1.n41 / September 10, 2019
+* Life is misery
+
 #### 2019.1.n4 / September 10, 2019
 * Changed the color of gallery captions to be less bright
 * Unhid the 'Edit this'-links
