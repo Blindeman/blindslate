@@ -17,9 +17,6 @@ BlindSlate is distributed under the terms of the GNU GPL
 
 /* * * * M O B I L E  F I R S T * * * */
 
-.post-edit-link {
-    display: none;
-}
 /* variables 
 :root{
     --blush: #FDF3F2; /* #FBE9E7 - hsl(6, 71.4%, 94.5%) / #FDF6F6 *//*
@@ -177,9 +174,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .wp-caption {
 	max-width: 100%;
 }
-.wp-caption-text { font-size: 90%; margin-top: 0.5em; }
-/*.sticky {}
-.gallery-caption {}*/
+.wp-caption-text {
+    font-size: 90%;
+    margin-top: 0.5em;
+}
+/*.sticky {}*/
+.gallery-caption {
+    color: #b4b4b4;
+}
 .alignnone {
     margin: 5px 20px 20px 0;
 }
@@ -375,6 +377,7 @@ a.thumbnail-link:active::after {
 }
 h2:not(:first-child),
 h3:not(:first-child),
+h4:not(:first-child),
 p + p {
     margin-top: 1.5rem;
 }
@@ -423,7 +426,11 @@ div > .gallery {
     color: #426E86;
     font-size: 120%;
 }
-.entry-footer h4 {
+.entry-content h4 {
+	color: #426E86;
+}
+.entry-footer h4,
+.entry-content h4 {
     font-size: 90%;
     font-weight: 600;
     text-transform: uppercase;
@@ -752,6 +759,13 @@ button[type="submit"]:active {
         -ms-grid-column: 3;
         -ms-grid-row: 2;
     }
+    .page:not(.page-id-431):not(.page-id-198) #wrapper,
+    .archive:not(.post-type-archive-portfolio):not(.tax-portfolio_tag) #wrapper,
+    .search #wrapper {
+        background-image: url("https://blindemanwebsites.com/wp-content/uploads/reiger-lang-2.png");
+        background-repeat: no-repeat;
+        background-position: 95% bottom;
+    }
 }
 @media screen and (min-width: 1024px){
     .page h1.entry-title,
@@ -765,7 +779,7 @@ button[type="submit"]:active {
         padding-bottom: 0.5em;
     }
     #vscf {
-        width: 50%;
+        width: 66.67%;
     }
 }
 @media screen and (min-width: 1025px){
@@ -788,6 +802,14 @@ button[type="submit"]:active {
     }
     .width {
         max-width: 1024px;
+    }
+    .page:not(.page-id-431):not(.page-id-198) #wrapper,
+    .archive:not(.post-type-archive-portfolio):not(.tax-portfolio_tag) #wrapper,
+    .search #wrapper {
+        background-attachment: fixed;
+    }
+    .page-template-default:not(.page-id-431):not(.page-id-198) .entry-content {
+        width: 75%;
     }
     #branding {
         -webkit-box-flex: initial;

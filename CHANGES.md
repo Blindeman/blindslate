@@ -1,3 +1,12 @@
+#### 2019.1.n4 / September 10, 2019
+* Changed the color of gallery captions to be less bright
+* Unhid the 'Edit this'-links
+* Use a slightly bigger thumbnail in single portfolio gallery
+* Use a slightly bigger thumbnail in single post
+* Added a heron on some pages ipad and big screens and don't let it overlap the text
+* Added styles for h4
+* Added an archive template for the portfolio_tag
+
 #### 2019.1.n3 / September 9, 2019
 * Make the home_url in the search form relative
 * Improved Dutch translations
