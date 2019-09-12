@@ -1,3 +1,6 @@
+#### 2019.1.n5 / September 11, 2019
+* Check for screenwidth instead of wp_is_mobile to show or hide the mobile menu
+
 #### 2019.1.n41 / September 10, 2019
 * Life is misery
 
