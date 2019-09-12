@@ -1,3 +1,6 @@
+#### 2019.1.5 / September 11, 2019
+* I don't like this versioning system at all
+
 #### 2019.1.n5 / September 11, 2019
 * Check for screenwidth instead of wp_is_mobile to show or hide the mobile menu
 
