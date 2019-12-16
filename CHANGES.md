@@ -1,3 +1,6 @@
+#### 2019.1.6 / December 16, 2019
+* Made the links in the content more visible
+
 #### 2019.1.5 / September 11, 2019
 * I don't like this versioning system at all
 
