@@ -401,7 +401,8 @@ h1.entry-title {
     line-height: 1;
 	text-transform: lowercase;
 }
-.entry-content div:not(.bw-post-list) a::before {
+.entry-content > p a::before,
+.entry-content > ul a::before {
 	border-bottom: 2px dotted #F9BA32;
 	content: "";
 	width: 112%;
