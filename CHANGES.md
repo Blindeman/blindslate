@@ -1,3 +1,6 @@
+#### 2019.1.7 / December 17, 2019
+* Little fix to which links should be more visible
+
 #### 2019.1.6 / December 16, 2019
 * Made the links in the content more visible
 
