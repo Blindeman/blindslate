@@ -1,19 +1,22 @@
-#### 2019.1.7 / December 17, 2019
+### 2019.1.8 / December 29, 2019
+* Hide the statcounter div (in case someone has no js)
+
+### 2019.1.7 / December 17, 2019
 * Little fix to which links should be more visible
 
-#### 2019.1.6 / December 16, 2019
+### 2019.1.6 / December 16, 2019
 * Made the links in the content more visible
 
-#### 2019.1.5 / September 11, 2019
+### 2019.1.5 / September 11, 2019
 * I don't like this versioning system at all
 
-#### 2019.1.n5 / September 11, 2019
+### 2019.1.n5 / September 11, 2019
 * Check for screenwidth instead of wp_is_mobile to show or hide the mobile menu
 
-#### 2019.1.n41 / September 10, 2019
+### 2019.1.n41 / September 10, 2019
 * Life is misery
 
-#### 2019.1.n4 / September 10, 2019
+### 2019.1.n4 / September 10, 2019
 * Changed the color of gallery captions to be less bright
 * Unhid the 'Edit this'-links
 * Use a slightly bigger thumbnail in single portfolio gallery
@@ -22,7 +25,7 @@
 * Added styles for h4
 * Added an archive template for the portfolio_tag
 
-#### 2019.1.n3 / September 9, 2019
+### 2019.1.n3 / September 9, 2019
 * Make the home_url in the search form relative
 * Improved Dutch translations
 * Added grid styles for IE11
@@ -33,7 +36,7 @@
 * Put the transition for the links on hover(!) to remove the odd behavior in IE11 on hover-out, where the line or background that had appeared on hover, grew much much bigger before it became smaller
 * Added more grid styles for compatability with Safari 11
 
-#### 2019.1.n2 / September 8, 2019
+### 2019.1.n2 / September 8, 2019
 * Allow for bigger images
 * enqueue Google fonts differently
 * Made flexbox work in IE11
@@ -42,5 +45,5 @@
 * Removed some unneeded spaces from the stylesheet
 * Try to make grid work in IE11
 
-#### 2019.1.n1 / September 7, 2019
+### 2019.1.n1 / September 7, 2019
 * First release
