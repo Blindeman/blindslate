@@ -3,6 +3,9 @@ My own version of: This is the official and original BlankSlate HTML5 WordPress 
 
 ## Changelog
 
+### 2020.2.0 / January 7, 2020
+* set the size of the_post_tumbnail() explicitly bc I'm not sure where it was getting the size from
+
 ### 2019.1.8 / December 29, 2019
 * Hide the statcounter div (in case someone has no js)
 

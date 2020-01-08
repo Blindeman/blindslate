@@ -5,7 +5,7 @@ Github Theme URI: https://github.com/Blindeman/blindslate
 Author: Naomi Blindeman
 Author URI: https://blindemanwebsites.com/
 Description: This theme is based on BlankSlate by TidyThemes. Please read: tidythemes.com/concept. BlankSlate is the definitive WordPress HTML5 boilerplate starter theme. We've carefully constructed the most clean and minimalist theme possible for designers and developers to use as a base to build websites for clients or to build completely custom themes from scratch. Clean, simple, unstyled, semi-minified, unformatted, and valid code, SEO-friendly, jQuery-enabled, no programmer comments, standardized and as white label as possible, and most importantly, the CSS is reset for cross-browser-compatability and no intrusive visual CSS styles have been added whatsoever. A perfect skeleton theme. For support and suggestions, go to: https://github.com/tidythemes/blankslate/issues. Thank you.
-Version: 2019.1.8
+Version: 2020.2.0
 License: GNU General Public License
 License URI: https://www.gnu.org/licenses/gpl.html
 Tags: one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
@@ -90,10 +90,10 @@ ol, ul {
     list-style: none
 }
 img {
-	height: auto;
+    height: auto;
     max-width: 100%;
     vertical-align: middle;
-	width: 100%;
+    width: 100%;
 }
 blockquote, q {
     quotes: none
@@ -172,7 +172,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     -webkit-tap-highlight-color: transparent
 }
 .wp-caption {
-	max-width: 100%;
+    max-width: 100%;
 }
 .wp-caption-text {
     font-size: 90%;
@@ -204,9 +204,9 @@ div.aligncenter {
     position: absolute !important
 }
 .clearfix::after {
-	content: "";
-	display: table;
-	clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 #wrapper {
     display: -webkit-box;
@@ -225,7 +225,7 @@ div.aligncenter {
     flex: none;
 }
 div.featherlight:last-of-type {
-	background: RGBA(47, 49, 49, 0.95); /* var(--coal) transparent */
+    background: RGBA(47, 49, 49, 0.95); /* var(--coal) transparent */
 }
 
 /* * * * H E A D E R * * * */
@@ -301,9 +301,9 @@ div.featherlight:last-of-type {
 #menu-hoofdmenu,
 #menu-hoofdmenu-engels {
     background-color:RGBA(66, 110, 134,0.97); /* var(--steelBlue) transparent */
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     font-size: 1.5rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -326,7 +326,7 @@ div.featherlight:last-of-type {
 }
 #menu-hoofdmenu li[class*="current-menu-"] > a,
 #menu-hoofdmenu-engels li[class*="current-menu-"] > a {
-	color: #F9BA32;
+    color: #F9BA32;
 }
 #menu-hoofdmenu .menu-item a:hover,
 #menu-hoofdmenu-engels .menu-item a:hover,
@@ -341,12 +341,12 @@ div.featherlight:last-of-type {
 #menu-hoofdmenu .menu-item a:visited::after,
 #menu-hoofdmenu-engels .menu-item a:link::after,
 #menu-hoofdmenu-engels .menu-item a:visited::after {
-	height: 2px;
-	bottom: 0;
-	top: auto;
-	-webkit-transform: rotate(-1deg);
-	-ms-transform: rotate(-1deg);
-	transform: rotate(-1deg);
+    height: 2px;
+    bottom: 0;
+    top: auto;
+    -webkit-transform: rotate(-1deg);
+    -ms-transform: rotate(-1deg);
+    transform: rotate(-1deg);
 }
 
 /* language Switcher */
@@ -370,7 +370,7 @@ a.thumbnail-link:active::after {
     content: none;
 }
 .lang-item img {
-	width: auto;
+    width: auto;
 }
 
 /* * * * C O N T E N T * * * */
@@ -385,32 +385,32 @@ p + p {
 }
 .width {
     display: block;
-	max-width: 90%;
-	margin: auto;
+    max-width: 90%;
+    margin: auto;
 }
 hr {
-	margin: 1.5em auto;
-	width: 60%;
-	border: none;
-	border-top: 3px dotted #F9BA32;
+    margin: 1.5em auto;
+    width: 60%;
+    border: none;
+    border-top: 3px dotted #F9BA32;
 }
 h1.entry-title {
-	font-family: "Amatic Sc", handwriting;
-	font-size: 200%;
-	color: #426E86;
+    font-family: "Amatic Sc", handwriting;
+    font-size: 200%;
+    color: #426E86;
     font-weight: 600;
     line-height: 1;
-	text-transform: lowercase;
+    text-transform: lowercase;
 }
 .entry-content > p a::before,
 .entry-content > ul a::before {
-	border-bottom: 2px dotted #F9BA32;
-	content: "";
-	width: 112%;
-	position: absolute;
-	left: -5%;
-	bottom: -1px;
-	transform: skewX(-5deg);
+    border-bottom: 2px dotted #F9BA32;
+    content: "";
+    width: 112%;
+    position: absolute;
+    left: -5%;
+    bottom: -1px;
+    transform: skewX(-5deg);
 }
 .entry-content a:hover,
 .entry-content a:focus,
@@ -424,10 +424,10 @@ div > .gallery {
 .entry-content ul { margin-left: 0.5em; }
 .entry-content li { list-style: none; }
 .entry-content li::before {
-	content: "\E80E";
-	font-family: 'entypo';
-	padding-right: 0.5em;
-	color: #426E86;
+    content: "\E80E";
+    font-family: 'entypo';
+    padding-right: 0.5em;
+    color: #426E86;
 }
 .entry-content h2 {
     color: #426E86;
@@ -439,7 +439,7 @@ div > .gallery {
     font-size: 120%;
 }
 .entry-content h4 {
-	color: #426E86;
+    color: #426E86;
 }
 .entry-footer h4,
 .entry-content h4 {
@@ -448,18 +448,18 @@ div > .gallery {
     text-transform: uppercase;
 }
 h3.icon-star-empty::before {
-	margin-left: -0.2em;
+    margin-left: -0.2em;
     color: #F9BA32;
     text-shadow: 1px 1px 1px #426E86;
-	-webkit-transform: rotate(-5deg);
-	-ms-transform: rotate(-5deg);
-	transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
 }
 .portfolio-gallery {
     background-color: #2F3131;
     color: #F8F1E5;
     margin-bottom: 2em;
-	padding: 1em;
+    padding: 1em;
 }
 .portfolio-gallery li + li {
     margin-top: 1em;
@@ -467,7 +467,7 @@ h3.icon-star-empty::before {
 
 /* Archives */
 .bw-post-list {
-	margin-top: 1.5rem;
+    margin-top: 1.5rem;
 }
 .archive.post-type-archive-portfolio #content,
 .archive.tax-portfolio_tag #content {
@@ -502,9 +502,9 @@ h3.icon-star-empty::before {
 }
 .bw-post-list h2.entry-title,
 h2.entry-title {
-	font-size: 1.1em;
-	font-weight: 400;
-	letter-spacing: 1px;
+    font-size: 1.1em;
+    font-weight: 400;
+    letter-spacing: 1px;
 }
 h2.entry-title a {
     color: #F9BA32;
@@ -530,23 +530,23 @@ h2.entry-title a:active {
 }
 .entry-meta {
     color: #b4b4b4;
-	font-size: 75%;
+    font-size: 75%;
 }
 .thumbnail-link {
-	display: block;
+    display: block;
 }
 .portfolio-tag-links.icon-tag::before,
 .tag-links.icon-tag::before {
-	color: #F9BA32;
-	text-shadow: 1px 1px 1px #426E86;
+    color: #F9BA32;
+    text-shadow: 1px 1px 1px #426E86;
 }
 .post-navigation {
     margin-top: 1em;
 }
 .nav-links {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -557,7 +557,7 @@ h2.entry-title a:active {
 }
 .nav-links a:link,
 .nav-links a:visited {
-	color: #2F3131;
+    color: #2F3131;
 }
 
 /* * * * F O R M S * * * */
@@ -575,7 +575,7 @@ input[type="submit"],
 button,
 textarea,
 select {
-	background-color: #2F3131;
+    background-color: #2F3131;
     border: 1px solid #2F3131;
     color: #F8F1E5;
     font-size: 1em;
@@ -584,12 +584,12 @@ select {
     width: 100%;
 }
 input[type="submit"] {
-	width: 15%;
-	height: 3.5em;
-	border: 1px solid #2F3131;
-	background-color: #2F3131;
-	color: #F8F1E5;
-	vertical-align: top;
+    width: 15%;
+    height: 3.5em;
+    border: 1px solid #2F3131;
+    background-color: #2F3131;
+    color: #F8F1E5;
+    vertical-align: top;
 }
 input:focus,
 textarea:focus,
@@ -600,43 +600,43 @@ button[type="submit"]:active {
     border-color: #F9BA32;
 }
 #s {
-	padding-left: 2.2em;
+    padding-left: 2.2em;
 }
 #searchform::before {
-	content: "\e80b";
-	font-family: entypo;
-	color: #F8F1E5;
-	position: absolute;
-	left: 0.5em;
-	top: 0.4em;
-	font-size: 125%;
+    content: "\e80b";
+    font-family: entypo;
+    color: #F8F1E5;
+    position: absolute;
+    left: 0.5em;
+    top: 0.4em;
+    font-size: 125%;
 }
 #vscf .form-group input[type="text"],
 #vscf .form-group input[type="email"],
 #vscf .form-group textarea {
-	width: 100%;
+    width: 100%;
 }
 
 
 /* * * * F O O T E R * * * */
 #footer {
-	background-image: url("//blindemanwebsites.com/wp-content/uploads/gras.png");
+    background-image: url("//blindemanwebsites.com/wp-content/uploads/gras.png");
     background-repeat: repeat-x;
     background-position: center bottom;
     margin: 3.7em 0 0;
 }
 .xoxo {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-	min-height: 18em;
+    min-height: 18em;
 }
 .xoxo > li {
     background-color: RGBA(248, 241, 229, 0.6); /*Bone transparent*/
@@ -656,7 +656,7 @@ button[type="submit"]:active {
 .socialmedialinks a:hover,
 .socialmedialinks a:focus,
 .socialmedialinks a:active {
-	border-color: #F9BA32;
+    border-color: #F9BA32;
 }
 
 
