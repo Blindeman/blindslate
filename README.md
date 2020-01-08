@@ -3,6 +3,9 @@ My own version of: This is the official and original BlankSlate HTML5 WordPress 
 
 ## Changelog
 
+### 2020.2.1 / January 7, 2020
+* Fix: typo
+
 ### 2020.2.0 / January 7, 2020
 * set the size of the_post_tumbnail() explicitly bc I'm not sure where it was getting the size from
 
