@@ -1,3 +1,7 @@
+### 2020.2.2 / January 8, 2020
+* added styling for `<strong>`, `<b>`, `<em>` and `<i>`
+* Removed header fixed position on desktop
+
 ### 2020.2.1 / January 7, 2020
 * Fix: typo
 

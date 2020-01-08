@@ -5,7 +5,7 @@ Github Theme URI: https://github.com/Blindeman/blindslate
 Author: Naomi Blindeman
 Author URI: https://blindemanwebsites.com/
 Description: This theme is based on BlankSlate by TidyThemes. Please read: tidythemes.com/concept. BlankSlate is the definitive WordPress HTML5 boilerplate starter theme. We've carefully constructed the most clean and minimalist theme possible for designers and developers to use as a base to build websites for clients or to build completely custom themes from scratch. Clean, simple, unstyled, semi-minified, unformatted, and valid code, SEO-friendly, jQuery-enabled, no programmer comments, standardized and as white label as possible, and most importantly, the CSS is reset for cross-browser-compatability and no intrusive visual CSS styles have been added whatsoever. A perfect skeleton theme. For support and suggestions, go to: https://github.com/tidythemes/blankslate/issues. Thank you.
-Version: 2020.2.1
+Version: 2020.2.2
 License: GNU General Public License
 License URI: https://www.gnu.org/licenses/gpl.html
 Tags: one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
@@ -48,6 +48,10 @@ body {
     min-height: 100%;
     min-height: 100vh;
 }
+b,
+strong { font-weight: bold; }
+i,
+em { font-style: italic; }
 a {
     color: #426E86;
     position: relative;
@@ -795,31 +799,20 @@ button[type="submit"]:active {
     }
 }
 @media screen and (min-width: 1025px){
-    #site-title {
-        font-size: 2.5rem;
-    }
-    .entry-content h2 {
-        font-size: 185%;
-    }
-    h1.entry-title {
-        font-size: 2.5rem;
-    }
-    #container {
-        margin-top: 12em;
-    }
-    #header .width {
+    #site-title { font-size: 2.5rem; }
+    .entry-content h2 { font-size: 185%; }
+    h1.entry-title { font-size: 2.5rem; }
+    #container { margin-top: 7.25em; }
+    #header { position: static; }
+    #header .width { 
         -webkit-box-align: end;
         -ms-flex-align: end;
         align-items: flex-end;
     }
-    .width {
-        max-width: 1024px;
-    }
+    .width { max-width: 1024px; }
     .page:not(.page-id-431):not(.page-id-198) #wrapper,
     .archive:not(.post-type-archive-portfolio):not(.tax-portfolio_tag) #wrapper,
-    .search #wrapper {
-        background-attachment: fixed;
-    }
+    .search #wrapper { background-attachment: fixed; }
     .page-template-default:not(.page-id-431):not(.page-id-198) .entry-content {
         width: 75%;
     }
@@ -840,12 +833,8 @@ button[type="submit"]:active {
         display: -ms-flexbox;
         display: flex;
     }
-    .menu-toggle {
-        display: none;
-    }
-    .menu.width {
-        display: block;
-    }
+    .menu-toggle { display: none; }
+    .menu.width { display: block; }
     #menu-hoofdmenu,
     #menu-hoofdmenu-engels {
         background: transparent;
@@ -861,17 +850,11 @@ button[type="submit"]:active {
         padding: 0;
         padding-bottom: 0.2em;
     }
-    .menu-item {
-        margin: 0 0 0 1.8%;
-    }
+    .menu-item { margin: 0 0 0 1.8%; }
     .archive article:not(.portfolio),
     .search article,
-    .bw-post-list article {
-        width: 75%;
-    }
-    .hentry .header {
-        margin-bottom: 1.5em;
-    }
+    .bw-post-list article { width: 75%; }
+    .hentry .header { margin-bottom: 1.5em; }
     .page h1.entry-title,
     .search h1.entry-title,
     .archive h1.entry-title {
