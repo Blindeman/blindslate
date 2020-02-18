@@ -1,3 +1,6 @@
+### 2020.2.4 / February 18, 2020
+* Added more styling to uls
+
 ### 2020.2.3 / February 18, 2020
 * Changed ul styles and links within uls
 
