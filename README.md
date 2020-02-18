@@ -3,6 +3,9 @@ My own version of: This is the official and original BlankSlate HTML5 WordPress 
 
 ## Changelog
 
+### 2020.2.3 / February 18, 2020
+* Changed ul styles and links within uls
+
 ### 2020.2.2 / January 8, 2020
 * added styling for `<strong>`, `<b>`, `<em>` and `<i>`
 * Removed header fixed position on desktop
