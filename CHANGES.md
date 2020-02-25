@@ -1,3 +1,6 @@
+### 2020.2.6 / February 25, 2020
+* Left old value in there
+
 ### 2020.2.5 / February 25, 2020
 * Changed the cropping point for thumbnails from standard to center top
 

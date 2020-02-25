@@ -3,6 +3,9 @@ My own version of: This is the official and original BlankSlate HTML5 WordPress 
 
 ## Changelog
 
+### 2020.2.6 / February 25, 2020
+* Left old value in there
+
 ### 2020.2.5 / February 25, 2020
 * Changed the cropping point for thumbnails from standard to center top
 
