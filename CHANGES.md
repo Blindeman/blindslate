@@ -1,3 +1,6 @@
+### 2020.2.7 / February 25, 2020
+* made it so that tall images were shown full-width and scrollable in lightbox
+
 ### 2020.2.6 / February 25, 2020
 * Left old value in there
 
