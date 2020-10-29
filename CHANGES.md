@@ -1,3 +1,6 @@
+### 2020.10.8 / October 28, 2020
+* Made it spooky for Halloween
+
 ### 2020.2.7 / February 25, 2020
 * made it so that tall images were shown full-width and scrollable in lightbox
 
