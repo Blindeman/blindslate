@@ -3,6 +3,9 @@ My own version of: This is the official and original BlankSlate HTML5 WordPress 
 
 ## Changelog
 
+### 2020.10.9 / October 28, 2020
+* One of the colors was just too ugly, replaced it with coal
+
 ### 2020.10.8 / October 28, 2020
 * Made it spooky for Halloween
 
