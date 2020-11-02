@@ -1,3 +1,6 @@
+### 2020.11.10 / November 2, 2020
+* Made it autumnal with a boar
+
 ### 2020.10.9 / October 28, 2020
 * One of the colors was just too ugly, replaced it with coal
 
