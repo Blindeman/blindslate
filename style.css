@@ -5,7 +5,7 @@ Github Theme URI: https://github.com/Blindeman/blindslate
 Author: Naomi Blindeman
 Author URI: https://blindemanwebsites.com/
 Description: This theme is based on BlankSlate by TidyThemes. Please read: tidythemes.com/concept. BlankSlate is the definitive WordPress HTML5 boilerplate starter theme. We've carefully constructed the most clean and minimalist theme possible for designers and developers to use as a base to build websites for clients or to build completely custom themes from scratch. Clean, simple, unstyled, semi-minified, unformatted, and valid code, SEO-friendly, jQuery-enabled, no programmer comments, standardized and as white label as possible, and most importantly, the CSS is reset for cross-browser-compatability and no intrusive visual CSS styles have been added whatsoever. A perfect skeleton theme. For support and suggestions, go to: https://github.com/tidythemes/blankslate/issues. Thank you.
-Version: 2020.11.10
+Version: 2020.11.11
 License: GNU General Public License
 License URI: https://www.gnu.org/licenses/gpl.html
 Tags: one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
@@ -617,7 +617,7 @@ button[type="submit"]:active { border-color: #F9BA32; }
 .socialmedialinks a:focus,
 .socialmedialinks a:active { border-color: #F9BA32; }
 
-/* Halloween 2020*/
+/* Fall 2020*/
 .page:not(.page-id-431):not(.page-id-198) #wrapper,
 .archive:not(.post-type-archive-portfolio):not(.tax-portfolio_tag) #wrapper,
 .search #wrapper {
@@ -727,11 +727,11 @@ button[type="submit"]:active { border-color: #F9BA32; }
     .archive:not(.post-type-archive-portfolio):not(.tax-portfolio_tag) #wrapper,
     .search #wrapper {
 		/*background-image: url("https://blindemanwebsites.com/wp-content/uploads/reiger-lang-2.png"); pre-halloween 2020*/
-		/* Halloween 2020*/
-		background-image: url("img/Pumpkin-Hay-BaleHalloween.svg");
+		/* Fall 2020*/
+		background-image: url("img/gestreepte-zwijntjes.png");
         background-repeat: no-repeat;
 		background-position: 95% bottom;
-		background-size: 50%;
+		background-size: 25%;
     }
 }
 @media screen and (min-width: 1024px){
